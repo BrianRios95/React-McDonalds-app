@@ -1,0 +1,28 @@
+.navbar-container {
+  background-color: var(--veryLightgrey);
+  padding: 2rem 0;
+
+  &__navMenu {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 130rem;
+    margin: 0 auto;
+
+    .navImg {
+      border: 1px solid red;
+    }
+
+    .navList {
+      display: flex;
+      gap: 3.2rem;
+      list-style: none;
+
+      li {
+        border: 1px solid red;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+}
