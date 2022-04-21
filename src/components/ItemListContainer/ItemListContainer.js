@@ -9,12 +9,10 @@ const ItemListContainer = () => {
   const { category } = useParams();
 
   useEffect(() => {
-    getProductsByCategory(category).then(products => {
+    getProductsByCategory(category).then((products) => {
       setItems(products);
     });
   }, [category]);
-
-  console.log(category);
 
   return (
     <div>

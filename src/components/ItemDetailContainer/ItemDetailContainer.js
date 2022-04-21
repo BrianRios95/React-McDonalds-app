@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useParams } from 'react-router-dom';
-import { getProductById, getProductDetail } from '../../products';
+import { useParams } from 'react-router-dom';
+import { getProductById } from '../../products';
 import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
@@ -8,12 +8,10 @@ const ItemDetailContainer = () => {
   const { itemID } = useParams();
 
   useEffect(() => {
-    getProductById(itemID).then(product => {
+    getProductById(itemID).then((product) => {
       setItemDetail(product);
     });
   }, [itemID]);
-
-  console.log(itemDetail);
 
   return (
     <div>

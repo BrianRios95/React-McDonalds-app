@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const Counter = () => {
+const Counter = ({ onConfirm }) => {
   const [amount, setAmount] = useState(0);
 
   const increaseAmount = () => {
@@ -18,6 +18,7 @@ const Counter = () => {
       <button onClick={increaseAmount}>+</button>
       <h4>{amount}</h4>
       <button onClick={decreaseAmount}>-</button>
+      <button onClick={() => onConfirm(amount)}>Agregar al carrito</button>
     </div>
   );
 };
