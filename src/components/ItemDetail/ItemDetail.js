@@ -28,7 +28,10 @@ const ItemDetail = ({ id, name, price, category, img, description }) => {
       </div>
       <div>
         {isInCart(id) ? (
-          <Link to="/cart">Ir al carrito</Link>
+          <div>
+            <Link to="/cart">Ir al carrito</Link>
+            <Link to="/checkout">Terminar compra</Link>
+          </div>
         ) : (
           <Counter onConfirm={onAdd} />
         )}

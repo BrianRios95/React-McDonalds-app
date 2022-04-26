@@ -1,6 +1,10 @@
 import { NavLink } from 'react-router-dom';
+import CartWidget from '../CartWidget/CartWidget';
+import { useContext } from 'react';
+import CartContext from "../../Context/CartContext";
 
 const Navbar = () => {
+  const { getQuantity } = useContext(CartContext);
   return (
     <header className="navbar-container">
       <nav className="navbar-container__navMenu">
@@ -11,10 +15,11 @@ const Navbar = () => {
           <NavLink className="navAnchor" to="/">
             Inicio
           </NavLink>
-          <NavLink to="/checkout" className="navAnchor">
+          <NavLink to="/cart" className="navAnchor">
             Carrito
           </NavLink>
-          {/* insertar componente carrito */}
+          {getQuantity() === 0 ? null : <CartWidget />}
+
         </ul>
       </nav>
     </header>

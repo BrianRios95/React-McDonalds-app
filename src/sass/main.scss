@@ -3,5 +3,6 @@
 @use './utils/variables';
 @use './layout/navbar';
 @use './layout/itemListContainer';
-@use './layout/itemList.scss';
+@use './layout/itemList';
 @use './layout/itemCard';
+@use './layout/cartWidget';
