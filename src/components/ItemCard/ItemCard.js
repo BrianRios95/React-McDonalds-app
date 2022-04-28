@@ -4,7 +4,7 @@ const ItemCard = ({ product }) => {
   return (
     <article className="itemCard">
       <button className='favorite'>
-        <img className='heart-icon' src='../../img/icons/heart-icon.png' />
+        <img className='heart-icon' src='../../img/icons/heart-icon.png' alt='heart-icon' />
       </button>
       <div className="itemCard__img">
         <img src={product.img} alt="product img" width={350} />

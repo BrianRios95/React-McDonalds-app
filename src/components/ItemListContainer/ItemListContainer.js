@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, Outlet, useParams } from 'react-router-dom';
-import { getProductsByCategory } from '../../products';
+import { useParams } from 'react-router-dom';
 import { getDocs, collection, query, where } from 'firebase/firestore';
 import ItemList from '../ItemList/ItemList';
 import MenuCategory from '../MenuCategory/MenuCategory';

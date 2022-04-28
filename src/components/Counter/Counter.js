@@ -8,7 +8,7 @@ const Counter = ({ onConfirm }) => {
   };
 
   const decreaseAmount = () => {
-    if (amount != 0) {
+    if (amount !== 0) {
       setAmount(amount - 1);
     }
   };
