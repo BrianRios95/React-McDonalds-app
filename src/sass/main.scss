@@ -1,8 +1,19 @@
+/* Base */
 @use './base/reset';
 @use './base/fonts';
 @use './utils/variables';
+/* App */
+@use "./layout/app";
+/* Navbar */
 @use './layout/navbar';
+/* Item List */
+@use "./layout/menuCategory";
 @use './layout/itemListContainer';
 @use './layout/itemList';
 @use './layout/itemCard';
+/* Item Detail */
+@use "./layout/itemDetailContainer";
+@use "./layout/itemDetail";
+@use "./layout/counter";
+/* Carrito */
 @use './layout/cartWidget';

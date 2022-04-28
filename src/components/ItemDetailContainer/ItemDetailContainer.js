@@ -22,9 +22,8 @@ const ItemDetailContainer = () => {
   }, [itemID]);
 
   return (
-    <div>
-      <h2>ItemDetailContainer</h2>
-      <div>
+    <div className='itemDetailContainer'>
+      <div className='itemDetailContainer__item'>
         <ItemDetail {...itemDetail} />
       </div>
     </div>

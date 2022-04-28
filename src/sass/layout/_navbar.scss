@@ -1,13 +1,21 @@
 .navbar-container {
+  align-items: center;
   background-color: var(--veryLightgrey);
+  display: flex;
+  grid-column: 1 / 2;
+  height: 65rem;
+  justify-content: center;
   padding: 2rem 0;
+
 
   &__navMenu {
     align-items: center;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    max-width: 130rem;
-    margin: 0 auto;
+    border: 1px solid red;
+    height: 45rem;
+
 
     .navImg {
       border: 1px solid red;
@@ -19,6 +27,7 @@
       list-style: none;
       display: flex;
       align-items: center;
+      flex-direction: column;
 
       .navAnchor {
         font-size: 1.8rem;

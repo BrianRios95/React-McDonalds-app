@@ -19,7 +19,6 @@ const Navbar = () => {
             Carrito
           </NavLink>
           {getQuantity() === 0 ? null : <CartWidget />}
-
         </ul>
       </nav>
     </header>

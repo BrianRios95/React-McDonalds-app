@@ -15,10 +15,16 @@ const Counter = ({ onConfirm }) => {
 
   return (
     <div className="counter">
-      <button onClick={increaseAmount}>+</button>
-      <h4>{amount}</h4>
-      <button onClick={decreaseAmount}>-</button>
-      <button onClick={() => onConfirm(amount)}>Agregar al carrito</button>
+      <div className='counter__amount'>
+        <button onClick={decreaseAmount}>-</button>
+        <div className='amount--container'>
+          <h4>{amount}</h4>
+        </div>
+        <button onClick={increaseAmount}>+</button>
+      </div>
+      <div className='counter__addToCart'>
+        <button onClick={() => onConfirm(amount)}>Agregar al carrito</button>
+      </div>
     </div>
   );
 };

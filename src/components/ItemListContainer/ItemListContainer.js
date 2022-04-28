@@ -17,7 +17,7 @@ const ItemListContainer = () => {
 
     const collectionCategory = category
       ? query(collection(firestoreDB, "products"), where("category", "==", category))
-      : collection(firestoreDB, "products");
+      : query(collection(firestoreDB, "products"), where("category", "==", "Hot"));
 
     getDocs(collectionCategory).then(response => {
       const products = response.docs.map(item => {
@@ -29,10 +29,9 @@ const ItemListContainer = () => {
   }, [category]);
 
   return (
-    <div>
-      <h2>Item List Container</h2>
+    <div className='itemListContainer'>
       <MenuCategory />
-      <div className="itemListContainer">
+      <div className="ItemListContainer__list">
         <ItemList products={items} />
       </div>
     </div>

@@ -19,22 +19,24 @@ const ItemDetail = ({ id, name, price, category, img, description }) => {
 
   return (
     <div className="itemDetail">
-      <div className="imgDetailContainer">
-        <img src={img} width={150} alt="item img" />
+      <div className="itemDetail__img">
+        <img className='itemImg' src={img} width={150} alt="item img" />
       </div>
-      <div className="description">
-        <h3>{name}</h3>
-        <p>{description}</p>
-      </div>
-      <div>
-        {isInCart(id) ? (
-          <div>
-            <Link to="/cart">Ir al carrito</Link>
-            <Link to="/checkout">Terminar compra</Link>
-          </div>
-        ) : (
-          <Counter onConfirm={onAdd} />
-        )}
+      <div className='itemDetail__text'>
+        <div className="description">
+          <h3>{name}</h3>
+          <p>{description}</p>
+        </div>
+        <div className='anchors'>
+          {isInCart(id) ? (
+            <div>
+              <Link className='btn goToCart' to="/cart">Ir al carrito</Link>
+              <Link className='btn checkout' to="/checkout">Terminar compra</Link>
+            </div>
+          ) : (
+            <Counter onConfirm={onAdd} />
+          )}
+        </div>
       </div>
     </div>
   );

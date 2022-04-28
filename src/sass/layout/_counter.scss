@@ -1,0 +1,49 @@
+.counter {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+
+  &__amount {
+    display: flex;
+    align-items: center;
+    width: 18rem;
+
+    button {
+      background-color: var(lightWhite);
+      border: none;
+      color: var(--black);
+      cursor: pointer;
+      font-size: 1.8rem;
+      font-weight: 600;
+      height: 4rem;
+      width: 4rem;
+      padding: 1rem;
+    }
+
+    .amount--container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      font-weight: 600;
+      text-align: center;
+      width: 7rem;
+      height: 4rem;
+    }
+  }
+
+  &__addToCart {
+
+    button {
+      background-color: var(--yellow);
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      height: 4rem;
+      text-transform: uppercase;
+      padding: 1rem 2.5rem;
+    }
+  }
+}

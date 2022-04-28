@@ -1,9 +1,77 @@
 .itemCard {
+  background-color: var(--lightWhite);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 17rem;
+  height: 21rem;
+  padding: 1rem;
+  text-align: center;
+  position: relative;
+
+  .favorite {
+    align-items: center;
+    background: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    overflow: hidden;
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 2rem;
+
+    .heart-icon {
+      width: 1.5rem;
+    }
+  }
+
+  .favorite:hover {
+    background-color: var(--veryLightgrey);
+  }
+
+  &__img {
+    background-color: var(--bread);
+    border-radius: 50%;
+    height: 10rem;
+    overflow: hidden;
+    width: 10rem;
+
+    img {
+      width: 10rem;
+    }
+  }
+
   &__text {
-    font-size: 2rem;
+    .item-name {
+      font-weight: 600;
+      font-size: .8rem;
+    }
+
+    .item-price {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: .5rem;
+    }
 
     .btn {
-      font-size: 2rem;
+      background-color: var(--yellow);
+      border-radius: 1rem;
+      color: var(--black);
+      display: block;
+      font-size: .8rem;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      margin-top: .5rem;
+      margin: .5rem auto 0 auto;
+      padding: 1rem;
+      width: 10rem;
     }
   }
 }
