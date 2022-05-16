@@ -1,19 +1,22 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import CartContext from "../../Context/CartContext";
 import { getDoc, doc, getDocs, query, where, writeBatch, collection, documentId, addDoc } from 'firebase/firestore';
 import { firestoreDB } from '../../services/firebase';
+import Order from "../Order/Order";
 
 const Cart = () => {
 
   const { cart, removeItem, totalCart } = useContext(CartContext);
+  const [openModal, setOpenModal] = useState(false);
 
-  const createOrder = () => {
+  const createOrder = (buyer) => {
     const order = {
       items: cart,
       buyer: {
-        nameBuyer: "Brian",
-        phone: "2612511340",
-        email: "riosbrian.ar@gmail.com",
+        buyerName: buyer.buyerName,
+        phone: buyer.phone,
+        email: buyer.email,
+        address: buyer.address,
       },
       total: totalCart(),
       date: new Date(),
@@ -54,19 +57,27 @@ const Cart = () => {
   }
 
   return (
-    <div>
-      <h2>Carrito</h2>
-      <ul>
-        {cart.map(item => (
-          <article key={item.id}>
-            <h4>{item.name}</h4>
-            <p>{item.quantity}</p>
-            <button onClick={() => removeItem(item.id)}>Eliminar</button>
-            <button onClick={() => createOrder()}>Crear Orden</button>
-          </article>
-        ))}
-      </ul>
-      <p>Total: {totalCart()}</p>
+    <div className="cart--container">
+      <div className="cart--container__items">
+        <h3>Tu Carrito</h3>
+        <ul>
+          {cart.map(item => (
+            <article className="cart--item" key={item.id}>
+              <div className="cart--item__img">
+                <img src={item.img} />
+              </div>
+              <h4>{item.name}</h4>
+              <p>{item.quantity}</p>
+              <button onClick={() => removeItem(item.id)}>Eliminar</button>
+            </article>
+          ))}
+        </ul>
+        <div className="actions">
+          <button className="checkout" onClick={() => setOpenModal(true)}>Checkout</button>
+          <p className="total">Total: {totalCart()}</p>
+        </div>
+        {openModal ? <Order closeModal={setOpenModal} order={createOrder} /> : null}
+      </div>
     </div>
   );
 };

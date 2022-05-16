@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const ItemCard = ({ product }) => {
+
   return (
     <article className="itemCard">
       <button className='favorite'>

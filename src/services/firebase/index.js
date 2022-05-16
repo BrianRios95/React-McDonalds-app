@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB07A4Cs6reJaTlWZ_AtqZuyuCJpbo-FZc",
-  authDomain: "mcdonalds-react-app.firebaseapp.com",
-  projectId: "mcdonalds-react-app",
-  storageBucket: "mcdonalds-react-app.appspot.com",
-  messagingSenderId: "1039348800925",
-  appId: "1:1039348800925:web:b2fd585ca7b572e7cfe374"
+  apiKey: process.env.REACT_APP_apiKey,
+  authDomain: process.env.REACT_APP_authDomain,
+  projectId: process.env.REACT_APP_projectId,
+  storageBucket: process.env.REACT_APP_storageBucket,
+  messagingSenderId: process.env.REACT_APP_messagingSenderId,
+  appId: process.env.REACT_APP_appId
 };
 
 // Initialize Firebase

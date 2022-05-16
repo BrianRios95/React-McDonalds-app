@@ -29,6 +29,21 @@
     .anchors {
       margin-top: 2rem;
 
+      .defaulText--container {
+        align-items: center;
+        background-color: var(--green);
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+
+        .defaulText {
+          color: var(--white);
+          font-size: 12px;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+
       div {
         display: flex;
         gap: 3rem;

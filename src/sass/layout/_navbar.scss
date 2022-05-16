@@ -1,6 +1,6 @@
 .navbar-container {
   align-items: center;
-  background-color: var(--veryLightgrey);
+  background-color: var(--lightWhite);
   display: flex;
   grid-column: 1 / 2;
   height: 65rem;
@@ -13,25 +13,40 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    border: 1px solid red;
     height: 45rem;
 
-
     .navImg {
-      border: 1px solid red;
+      background-color: #fff;
+      border-radius: 1.5rem;
     }
 
     .navList {
       display: flex;
-      gap: 3.2rem;
+      gap: 2rem;
       list-style: none;
       display: flex;
       align-items: center;
       flex-direction: column;
 
       .navAnchor {
-        font-size: 1.8rem;
+        align-items: center;
+        border: 2px solid var(--veryLightgrey);
+        border-radius: 1.5rem;
+        color: var(--black);
+        display: flex;
+        font-size: .9rem;
+        font-weight: 600;
+        height: 7rem;
+        justify-content: center;
         text-decoration: none;
+        text-transform: uppercase;
+        width: 7rem;
+      }
+
+      .active {
+        background-color: var(--red);
+        border: none;
+        color: var(--white);
       }
     }
   }

@@ -4,6 +4,7 @@
 @use './utils/variables';
 /* App */
 @use "./layout/app";
+@use "./layout/home";
 /* Navbar */
 @use './layout/navbar';
 /* Item List */
@@ -16,4 +17,6 @@
 @use "./layout/itemDetail";
 @use "./layout/counter";
 /* Carrito */
+@use "./layout/cart";
 @use './layout/cartWidget';
+@use "./layout/modal";

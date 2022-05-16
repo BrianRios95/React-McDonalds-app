@@ -10,6 +10,7 @@ const ItemDetail = ({ id, name, price, category, img, description }) => {
     const itemCart = {
       id,
       name,
+      img,
       price,
       quantity: amount,
     };
@@ -29,9 +30,10 @@ const ItemDetail = ({ id, name, price, category, img, description }) => {
         </div>
         <div className='anchors'>
           {isInCart(id) ? (
-            <div>
-              <Link className='btn goToCart' to="/cart">Ir al carrito</Link>
-              <Link className='btn checkout' to="/checkout">Terminar compra</Link>
+            <div className='defaulText--container'>
+              <p className='defaulText'>Producto agregado correctamente</p>
+              {/* <Link className='btn goToCart' to="/cart">Ir al carrito</Link>
+              <Link className='btn checkout' to="/checkout">Terminar compra</Link> */}
             </div>
           ) : (
             <Counter onConfirm={onAdd} />

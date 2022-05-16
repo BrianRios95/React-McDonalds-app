@@ -1,18 +1,22 @@
 .menuCategory {
-  border: 1px solid red;
   display: flex;
   gap: 2rem;
   padding: 3.2rem 0 0 3.2rem;
   width: 70%;
 
-  &__category--container {
+  &__categoryAnchor {
     align-items: center;
     border: 1px solid var(--black);
     border-radius: 1.5rem;
+    color: var(--black);
     display: flex;
     flex-direction: column;
+    font-size: .75rem;
+    font-weight: 500;
     height: 12rem;
     justify-content: space-around;
+    text-decoration: none;
+    text-transform: uppercase;
     width: 20rem;
 
     .categoryIcon--container {
@@ -29,12 +33,14 @@
         width: 5rem;
       }
     }
+  }
 
-    .anchor {
-      color: var(--black);
-      font-size: .8rem;
-      font-weight: 600;
-      text-decoration: none;
+  .active {
+    background-color: var(--yellow);
+    border: none;
+
+    .categoryIcon--container {
+      background-color: var(--white);
     }
   }
 }
